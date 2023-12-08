@@ -264,12 +264,7 @@ p{
 
 #finalAmount h2 {
     font-size: 50px;
-    color: red;
-}
- 
-.finalValue {
-    font-family: 'Amiri', serif;
-    color: #45a049;
+    color: rgb(255, 0, 0);
 }
 
 #finalAmount {
@@ -282,6 +277,8 @@ p{
     justify-content: center;
     border: none;
     background-color: none;
+    font-family: 'Amiri', serif;
+    color: #056109;
   }
   
   form{
