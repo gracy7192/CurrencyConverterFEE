@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // When the DOM content is fully loaded, add a submit event listener to the form
-    var form = document.querySelector('form');
-    form.addEventListener('submit', function (event) {
+    var form = document.querySelector('.cvt');
+    form.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Get user input values
