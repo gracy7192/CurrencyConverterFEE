@@ -62,19 +62,19 @@ button:hover {
 
 <script>
   function handleCreditCard() {
-    window.location.href="{{ url_for('creditcard') }}";
+    window.location.href="./credit-card-form.html";
   }
 
   function handleDebitCard() {
-    window.location.href="{{ url_for('debitcard') }}";
+    window.location.href="./debit-card-form.html";
   }
 
   function handleNetBanking() {
-    window.location.href = "{{ url_for('netbank') }}";
+    window.location.href = "./net-banking-form.html";
   }
 
   function handleUPI() {
-    window.location.href = "{{ url_for('upipay') }}";
+    window.location.href = "./upi-form.html";
   }
 </script>
 </head>
@@ -83,22 +83,22 @@ button:hover {
     <h1>Select Payment Method</h1>
     <div class="payment-options">
       <div class="card-option">
-        <img src="{{ url_for('static', filename='images/credit-card-icon-vector.jpg') }}" alt="Credit Card">
+        <img src="../static/images/credit-card-icon-vector.jpg" alt="Credit Card">
         <p>Credit Card</p>
         <button onclick="handleCreditCard()">Pay with Credit Card</button>
       </div>
       <div class="card-option">
-        <img src="{{ url_for('static', filename='images/debit-card-icon.png') }}" alt="Debit Card">
+        <img src="../static/images/debit-card-icon.png" alt="Debit Card">
         <p>Debit Card</p>
         <button onclick="handleDebitCard()">Pay with Debit Card</button>
       </div>
       <div class="netbanking-option">
-        <img src="{{ url_for('static', filename='images/net-banking-icon.png') }}" alt="Net Banking">
+        <img src="../static/images/net-banking-icon.png" alt="Net Banking">
         <p>Net Banking</p>
         <button onclick="handleNetBanking()">Pay with Net Banking</button>
       </div>
       <div class="upi-option">
-        <img src="{{ url_for('static', filename='images/upi-icon.png') }}" alt="UPI">
+        <img src="../static/images/upi-icon.png" alt="UPI">
         <p>UPI</p>
         <button onclick="handleUPI()">Pay with UPI</button>
       </div>

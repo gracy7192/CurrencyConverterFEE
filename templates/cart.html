@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cart.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/cart.css">
     <title>Product Shop</title>
     <script async defer>
         document.addEventListener('DOMContentLoaded', () => {
@@ -40,7 +40,7 @@
                 if (totalPrice == 0) {
                     alert("Please Select At Least One");
                 } else {
-                    window.open("{{ url_for('pay') }}", '_blank'); // Replace 'checkout.html' with the desired file
+                    window.open("payment.html", '_blank'); // Replace 'checkout.html' with the desired file
                 }
             });
         });
@@ -56,7 +56,7 @@
 
     <section class="products">
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a2.jpg') }}" alt="Product Image">
+            <img src="../static/images/a2.jpg" alt="Product Image">
             <h2>Product 1</h2>
             <p></p>
             <p class="product-price">$19.99</p>
@@ -64,48 +64,48 @@
         </div>
 
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a1.jpg') }}" alt="Product Image">
+            <img src="../static/images/a1.jpg" alt="Product Image">
             <h2>Product 2</h2>
             <p></p>
             <p class="product-price">$29.99</p>
             <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a7.jpg') }}" alt="Product Image">
+            <img src="../static/images/a7.jpg" alt="Product Image">
             <h2>Product 3</h2>
             <p></p>
             <p class="product-price">$37.99</p> 
              <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a8.jpg') }}" alt="Product Image">
+            <img src="../static/images/a8.jpg" alt="Product Image">
             <h2>Product 4</h2>
             <p></p>
             <p class="product-price">$8.99</p>
             <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a3.jpg') }}" alt="Product Image">
+            <img src="../static/images/a3.jpg" alt="Product Image">
             <h2>Product 5</h2>
             <p></p>
             <p class="product-price">$17.99</p>
             <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a5.jpg') }}" alt="Product Image">
+            <img src="../static/images/a5.jpg" alt="Product Image">
             <h2>Product 6</h2>
             <p></p>
             <p class="product-price">$49.99</p>
             <button>Add to Cart</button>
         </div> 
          <div class="product">
-            <img src="{{ url_for('static', filename='images/a4.jpg') }}" alt="Product Image">
+            <img src="../static/images/a4.jpg" alt="Product Image">
             <h2>Product 7</h2>
             <p class="product-price">$29.99</p>
             <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="{{ url_for('static', filename='images/a6.jpg') }}" alt="Product Image">
+            <img src="../static/images/a6.jpg" alt="Product Image">
             <h2>Product 8</h2>
              <p class="product-price">$50.00</p>
             <button>Add to Cart</button>

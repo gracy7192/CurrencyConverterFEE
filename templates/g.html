@@ -1,7 +1,10 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK</title>
+<head>
     <style>
         .contact-parent{
     background: #fff;
@@ -74,6 +77,19 @@
     color:#000;
     transition:0.2s;
 }
+
+label {
+    font-size: 20px;
+}
+
+#confirmationMessage{
+    display: none; 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    margin-top: -5px;
+}
+
 @media screen and (max-width:991px){
     .contact-parent{
         display:block;
@@ -107,24 +123,13 @@
                 alert('Please fill in all fields.');
                 return false;
             }
-            // You can add more complex validation here if needed
             alert("YOUR FEED HAVE BEEN SEND");
             return true;
-
-            
         }
     </script>
     
 </head>
 <body>
-
-
-
-
-
-
-
-
 
 <div class="container">
     <div class="contact-parent">
@@ -151,15 +156,15 @@
              <h3>
                 <span id="confirm">
              </h3>
-             <p>Name *</p>
+             <label for="txt_name">Name *</label>
              <input id="txt_name" type="text" Required="required">
-             <p>Email *</p>
+             <label for="txt_email">Email *</label>
              <input id="txt_email" type="email" Required="required">
-             <p>Phone *</p>
+             <label for="txt_phone">Phone *</label>
              <input id="txt_phone" type="number" Required="required">
-             <p>Subject *</p>
+             <label for="txt_subject">Subject *</label>
              <input id="txt_subject" type="text" Required="required">
-             <p>Message *</p>
+             <label for="txt_message">Message *</label>
              <textarea id="txt_message" rows="4" cols="20" Required="required" ></textarea>
              <button type="submit" id="btn_send" title="sendit">SUBMIT</button>
           </div>
@@ -169,7 +174,7 @@
  <div class="container">
     
 
-    <div id="confirmationMessage" style="display: none; padding: 10px; background-color: #f0f0f0; border: 1px solid #ccc;margin-top: -5px;">
+    <div id="confirmationMessage">
         Thank you! We'll use your feedback to improve our customer support.
     </div>
 </div>
@@ -196,11 +201,6 @@
     document.getElementById('btn_send').onclick = function() {
         return validateForm();
     };
-</script>
-
-
-
- 
-
+</script> 
 </body>
 </html>

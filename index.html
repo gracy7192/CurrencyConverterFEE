@@ -11,8 +11,9 @@
     <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script async defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script async defer src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/web.css') }}">
+    <script async defer src="./static/js/script.js"></script>
+    <script async defer src="./static/js/cc.js"></script>
+    <link rel="stylesheet" type="text/css" href="./static/css/web.css">
     
 </head>
 <body>
@@ -21,11 +22,11 @@
 </div>
     <div id="navpart2">
         <div id="links">
-            <a href="{{ url_for('about_us') }}">KNOW OUR TEAM</a>
-            <a href="{{ url_for('contact_us') }}">CONTACT US</a>
-            <a href="{{ url_for('feedback') }}">FEEDBACK</a>
-            <a href="{{ url_for('rate_us') }}">RATE US</a>
-            <a href="{{ url_for('shopping')}}">SHOP <i class="ri-shopping-cart-fill"></i></a>
+            <a href="./templates/aboutus3.html">KNOW OUR TEAM</a>
+            <a href="./templates/bc.html">CONTACT US</a>
+            <a href="./templates/g.html">FEEDBACK</a>
+            <a href="./templates/rateus.html">RATE US</a>
+            <a href="./templates/cart.html">SHOP <i class="ri-shopping-cart-fill"></i></a>
     </div>
     
  </div>
@@ -40,7 +41,7 @@
                 <div id="play">
                     PLAY
                 </div>  
-                <video autoplay loop muted src="{{ url_for('static', filename='videos/NewFile.mp4') }}"></video>
+                <video autoplay loop muted src="./static/videos/NewFile.mp4"></video>
             </div>
        
         </div>
@@ -49,7 +50,7 @@
             <br>
             <div id="elem1" class="elem">
             <!-- <div class="insideelem1">AMERICAN DOLLAR</div> -->
-            <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/dollar1.jpg') }}" alt="">
+            <img data-scroll data-scroll-speed="1" src="./static/images/dollar1.jpg" alt="">
             <div data-scroll data-scroll-speed="-1" class="dets" id="#e1">
                 <span class="text-center">AMERICAN DOLLAR</span>
                 <br>
@@ -59,7 +60,7 @@
             </div>
             <div id="elem2" class="elem">
                 <!-- <div class="insideelem1">INDIAN RUPEES</div> -->
-                <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/ruppee.jpg') }}" alt="">
+                <img data-scroll data-scroll-speed="1" src="./static/images/ruppee.jpg" alt="">
             <div data-scroll data-scroll-speed="-1" class="dets">
                 <span class="text-center">INDIAN RUPEES</span>
                 <br>
@@ -68,7 +69,7 @@
             </div>
             <div id="elem3" class="elem">
                 <!-- <div class="insideelem1">CANADIAN DOLL AR</div> -->
-                <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/canada.jpg') }}" alt="">
+                <img data-scroll data-scroll-speed="1" src="./static/images/canada.jpg" alt="">
             <div data-scroll data-scroll-speed="-1" class="dets">
                 <span class="text-center">CANADIAN DOLLAR</span> 
                 <br>  
@@ -80,131 +81,131 @@
 
     <section class="asf">
 
-    <font size="+4"><h1 class="animate__animated animate___bounce" id="maintitle" style="text-align:center;">CURRENCY CONVERTER</h1></font>
+    <font size="+4"><h1 class="animate__animated animate___bounce" id="maintitle">CURRENCY CONVERTER</h1></font>
           
    <hr>
    <br>
    <br>
 
     
-   <form id="currencyForm" style="text-align:center;" method="post">
+   <form id="currencyForm" method="post">
 
         <FIELDSET class="field_set">
         
-         <legend style="text-align:center;"><b>CALCULATE HERE</b></legend>
+         <legend><b>CALCULATE HERE</b></legend>
          <br>
          <label for="amount" class=".headingofenterofamount">Enter your amount:</label>
          <input type="text" id="amount" placeholder="0">
 <br>
 
         <label for="from" >CONVERT FROM:</label>
-        <select name="CONVERT FROM" id="selector">
-                     <option value="USD">USD</option>
+        <select name="CONVERT FROM" id="selector" title="convertfrom">
+                     <option value="USD">United States Dollar (USD)</option>
                      
-                     <option value="AUD">AUD</option>
-                     <option value="BGN">BGN</option>
-                     <option value="BRL">BRL</option>
+                     <option value="AUD">Australian Dollar (AUD)</option>
+                     <option value="BGN">Bulgarian Lev (BGN)</option>
+                     <option value="BRL">Brazilian Real (BRL)</option>
                      
-                     <option value="CAD">CAD</option>
-                     <option value="CHF">CHF</option>
+                     <option value="CAD">Canadian Dollar (CAD)</option>
+                     <option value="CHF">Swiss Franc (CHF)</option>
                      
-                     <option value="CNY">CNY</option>
+                     <option value="CNY">Chinese Yuan (CNY)</option>
                      
-                     <option value="CZK">CZK</option>
-                     <option value="DKK">DKK</option>
-                     
-                     
-                     <option value="EUR">EUR</option>
-                     
-                     <option value="GBP">GBP</option>
-                     
-                     <option value="HKD">HKD</option>
-                     
-                     <option value="HUF">HUF</option>
-                     <option value="IDR">IDR</option>
-                     
-                     <option value="INR">INR</option>
-                     <option value="ISK">ISK</option>
-                     <option value="JPY">JPY</option>
-                     <option value="KRW">KRW</option>
+                     <option value="CZK">Czech Koruna (CZK)</option>
+                     <option value="DKK">Danish Krone (DKK)</option>
                      
                      
-                     <option value="MXN">MXN</option>
-                     <option value="MYR">MYR</option>
-                     <option value="NOK">NOK</option>
-                     <option value="NZD">NZD</option>
+                     <option value="EUR">Euro (EUR)</option>
+                     
+                     <option value="GBP">Pound Sterling (GBP)</option>
+                     
+                     <option value="HKD">Hong Kong Dollar (HKD)</option>
+                     
+                     <option value="HUF">Hungarian Forint (HUF)</option>
+                     <option value="IDR">Indonesian Rupiah (IDR)</option>
+                     
+                     <option value="INR">Indian Rupees (INR)</option>
+                     <option value="ISK">Icelandic Krona (ICK)</option>
+                     <option value="JPY">Japanese Yen (JPY)</option>
+                     <option value="KRW">South Korean Won (KRW)</option>
                      
                      
-                     <option value="PHP">PHP</option>
-                     
-                     <option value="PLN">PLN</option>
-                     
-                     <option value="RON">RON</option>
-                     
-                     <option value="SAR">SAR</option>
-                     <option value="SEK">SEK</option>
-                     <option value="SGD">SGD</option>
-                     <option value="THB">THB</option>
-                     <option value="TRY">TRY</option>
+                     <option value="MXN">Mexican Peso (MXN)</option>
+                     <option value="MYR">Malaysian Ringgit (MYR)</option>
+                     <option value="NOK">Norwegian Krone (NOK)</option>
+                     <option value="NZD">New Zealand Dollar (NZD)</option>
                      
                      
+                     <option value="PHP">Philippine Peso (PHP)</option>
                      
-                     <option value="ZAR">ZAR</option>
+                     <option value="PLN">Polish Zloty (PLN)</option>
+                     
+                     <option value="RON">Romanian Leu (RON)</option>
+                     
+                     <option value="SAR">Saudi Riyal (SAR)</option>
+                     <option value="SEK">Swedish Krona (SEK)</option>
+                     <option value="SGD">Singapore Dollar (SGD)</option>
+                     <option value="THB">Thai Baht (THB)</option>
+                     <option value="TRY">Turkish Lira (TRY)</option>
+                     
+                     
+                     
+                     <option value="ZAR">South African Rand (ZAR)</option>
                      </select>
                      &emsp;
 <label for="to">CONVERT TO:</label>
-              <select name="CONVERT TO" id="selector1">
-                     <option value="USD">USD</option>
+              <select name="CONVERT TO" id="selector1" title="convertto">
+                <option value="USD">United States Dollar (USD)</option>
                      
-                     <option value="AUD">AUD</option>
-                     <option value="BGN">BGN</option>
-                     <option value="BRL">BRL</option>
-                     
-                     <option value="CAD">CAD</option>
-                     <option value="CHF">CHF</option>
-                     
-                     <option value="CNY">CNY</option>
-                     
-                     <option value="CZK">CZK</option>
-                     <option value="DKK">DKK</option>
-                     
-                     
-                     <option value="EUR">EUR</option>
-                     
-                     <option value="GBP">GBP</option>
-                     
-                     <option value="HKD">HKD</option>
-                     
-                     <option value="HUF">HUF</option>
-                     <option value="IDR">IDR</option>
-                     
-                     <option value="INR">INR</option>
-                     <option value="ISK">ISK</option>
-                     <option value="JPY">JPY</option>
-                     <option value="KRW">KRW</option>
-                     
-                     
-                     <option value="MXN">MXN</option>
-                     <option value="MYR">MYR</option>
-                     <option value="NOK">NOK</option>
-                     <option value="NZD">NZD</option>
-                     
-                     
-                     <option value="PHP">PHP</option>
-                     
-                     <option value="PLN">PLN</option>
-                     
-                     <option value="RON">RON</option>
-                     
-                     <option value="SAR">SAR</option>
-                     <option value="SEK">SEK</option>
-                     <option value="SGD">SGD</option>
-                     <option value="THB">THB</option>
-                     <option value="TRY">TRY</option>
-                     
-                     
-                     
-                     <option value="ZAR">ZAR</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="BGN">Bulgarian Lev (BGN)</option>
+                <option value="BRL">Brazilian Real (BRL)</option>
+                
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                
+                <option value="CZK">Czech Koruna (CZK)</option>
+                <option value="DKK">Danish Krone (DKK)</option>
+                
+                
+                <option value="EUR">Euro (EUR)</option>
+                
+                <option value="GBP">Pound Sterling (GBP)</option>
+                
+                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                
+                <option value="HUF">Hungarian Forint (HUF)</option>
+                <option value="IDR">Indonesian Rupiah (IDR)</option>
+                
+                <option value="INR">Indian Rupees (INR)</option>
+                <option value="ISK">Icelandic Krona (ICK)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="KRW">South Korean Won (KRW)</option>
+                
+                
+                <option value="MXN">Mexican Peso (MXN)</option>
+                <option value="MYR">Malaysian Ringgit (MYR)</option>
+                <option value="NOK">Norwegian Krone (NOK)</option>
+                <option value="NZD">New Zealand Dollar (NZD)</option>
+                
+                
+                <option value="PHP">Philippine Peso (PHP)</option>
+                
+                <option value="PLN">Polish Zloty (PLN)</option>
+                
+                <option value="RON">Romanian Leu (RON)</option>
+                
+                <option value="SAR">Saudi Riyal (SAR)</option>
+                <option value="SEK">Swedish Krona (SEK)</option>
+                <option value="SGD">Singapore Dollar (SGD)</option>
+                <option value="THB">Thai Baht (THB)</option>
+                <option value="TRY">Turkish Lira (TRY)</option>
+                
+                
+                
+                <option value="ZAR">South African Rand (ZAR)</option>
                      </select>
 
 <br>
@@ -213,7 +214,7 @@
                          CONVERT
                      </button>
 &emsp;
-<button type="submit">
+<button type="reset">
 RESET
 </button>
 
@@ -225,7 +226,7 @@ RESET
 <div id="finalAmount" class="text-center">
 
 <h2>Converted Amount :
- <span class="finalValue" style="color:green;">
+ <span class="finalValue">
  </span>
 </h2>
 </div>

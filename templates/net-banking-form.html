@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <title>Net Banking Payment</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 </head>
 <body>
   <h1>Net Banking Payment</h1>
-  <form id="net-banking-form" action="/checkout">
+  <form id="net-banking-form" action="checkout.html">
     <label for="bank_name">Bank Name:</label>
     <input type="text" id="bank_name" name="bank_name" required><br><br>
 

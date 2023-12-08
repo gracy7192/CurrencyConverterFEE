@@ -19,6 +19,7 @@ body{
 #maintitle {
     -webkit-text-stroke:3px #000;
     color:green;
+    text-align: center;
     }
 #nav{
    
@@ -142,16 +143,6 @@ p{
     justify-content: center;
 }
 
-
-/* .insideelem1{
-    display: flex;
-    position: relative;
-    left:210px;
-    font-size: 20px;
-    z-index: 12;
-    font-family:'gilroy';
-} */
-
 #page2 .elem .dets{
     height:50px;
     width:80%;
@@ -224,7 +215,7 @@ p{
             top:50%;
             left:50%;
             opacity:1;
-            scale:1;
+
             transform:translate(-50%,-50%);
             
         }
@@ -267,7 +258,6 @@ p{
             height:100vh;
             width:100%;
             object-fit: cover;
-            scale:1.1;
         }
         
 }
@@ -279,6 +269,7 @@ p{
  
 .finalValue {
     font-family: 'Amiri', serif;
+    color: #45a049;
 }
 
 #finalAmount {
@@ -323,10 +314,12 @@ p{
     color: #555;
   }
   
-  
+  legend {
+    text-align:center;
+  }
   
   select,input[type="text"] {
-    width: 200px;
+    width: 220px;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -334,6 +327,10 @@ p{
     margin-bottom: 15px; /* Add margin between input fields */
   }
   
+  #currencyForm {
+    text-align: center;
+  }
+
   #selector{
     position: relative;
     left: 11px;
