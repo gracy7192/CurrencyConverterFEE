@@ -239,40 +239,6 @@ RESET
 
 
 </form>
-
-<script async defer>
-    $('#currencyForm').submit(function(e) {
-        e.preventDefault(); // Prevent default form submission
-
-        var amount = $('#amount').val();
-        var fromCurrency = $('#selector').val();
-        var toCurrency = $('#selector1').val();
-
-        $.ajax({
-            type: 'POST',
-            url: '/convert',
-            data: {
-                amount: amount,
-                from_currency: fromCurrency,
-                to_currency: toCurrency
-            },
-            success: function(response) {
-                console.log(response); // Log the response data to inspect
-
-                if (response.success) {
-                    $('.finalValue').text(response.converted_amount.toFixed(2));
-                } else {
-                    $('.finalValue').text('Error converting currency.');
-                }
-            },
-            error: function() {
-                $('.finalValue').text('An error occurred while processing the request.');
-            }
-        });
-    });
-</script>
-
-
 </section>
 
 </div>  
