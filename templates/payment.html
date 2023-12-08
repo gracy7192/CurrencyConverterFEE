@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.payment-container {
+  text-align: center;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.card-option,
+.netbanking-option,
+.upi-option {
+  width: 200px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-option img,
+.netbanking-option img,
+.upi-option img {
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+    </style>
+
+<script>
+  function handleCreditCard() {
+    window.location.href="{{ url_for('creditcard') }}";
+  }
+
+  function handleDebitCard() {
+    window.location.href="{{ url_for('debitcard') }}";
+  }
+
+  function handleNetBanking() {
+    window.location.href = "{{ url_for('netbank') }}";
+  }
+
+  function handleUPI() {
+    window.location.href = "{{ url_for('upipay') }}";
+  }
+</script>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Select Payment Method</h1>
+    <div class="payment-options">
+      <div class="card-option">
+        <img src="{{ url_for('static', filename='images/credit-card-icon-vector.jpg') }}" alt="Credit Card">
+        <p>Credit Card</p>
+        <button onclick="handleCreditCard()">Pay with Credit Card</button>
+      </div>
+      <div class="card-option">
+        <img src="{{ url_for('static', filename='images/debit-card-icon.png') }}" alt="Debit Card">
+        <p>Debit Card</p>
+        <button onclick="handleDebitCard()">Pay with Debit Card</button>
+      </div>
+      <div class="netbanking-option">
+        <img src="{{ url_for('static', filename='images/net-banking-icon.png') }}" alt="Net Banking">
+        <p>Net Banking</p>
+        <button onclick="handleNetBanking()">Pay with Net Banking</button>
+      </div>
+      <div class="upi-option">
+        <img src="{{ url_for('static', filename='images/upi-icon.png') }}" alt="UPI">
+        <p>UPI</p>
+        <button onclick="handleUPI()">Pay with UPI</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
