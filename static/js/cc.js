@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Get user input values
-        var amount = parseFloat(document.getElementById('amount').value);
-        var fromCurrency = document.getElementById('selector').value;
-        var toCurrency = document.getElementById('selector1').value;
+        var amount = parseFloat($('#amount').val());
+      var fromCurrency = $('#selector').val();
+      var toCurrency = $('#selector1').val();
+
 
         if (isNaN(amount)) {
             // Validate if the entered amount is a valid number

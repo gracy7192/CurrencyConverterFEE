@@ -269,6 +269,7 @@ p{
 
 #finalAmount {
     position: relative;
+    display: none;
   }
   
   .finalValue {
