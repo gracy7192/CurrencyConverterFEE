@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // When the DOM content is fully loaded, add a submit event listener to the form
     var form = document.querySelector('#currencyForm');
-    form.addEventListener('submit', function () {
-     // Prevent the default form submission behavior
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
 
         // Get user input values
         var amount = parseFloat(document.getElementById('amount').value);
