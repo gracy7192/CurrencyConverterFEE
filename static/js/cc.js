@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         var convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
+        console.log(amount);
+        console.log(fromCurrency);
+        console.log(toCurrency);
+        console.log(convertedAmount);
         displayResult(convertedAmount);
     });
 });
