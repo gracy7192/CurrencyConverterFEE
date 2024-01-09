@@ -1,20 +1,16 @@
 var convertButton = document.querySelector('.cvt');
 convertButton.addEventListener('click', function () {
-var amount = parseFloat(document.getElementById('amount').value);
-var fromCurrency = document.getElementById('selector').value;
-var toCurrency = document.getElementById('selector1').value;
+    var amount = parseFloat(document.getElementById('amount').value);
+    var fromCurrency = document.getElementById('selector').value;
+    var toCurrency = document.getElementById('selector1').value;
 
-if (isNaN(amount)) {
-    alert('Please enter a valid amount.');
-    return;
-}
+    if (isNaN(amount)) {
+        alert('Please enter a valid amount.');
+        return;
+    }
 
-var convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
-console.log(amount);
-console.log(fromCurrency);
-console.log(toCurrency);
-console.log(convertedAmount);
-displayResult(convertedAmount);
+    var convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
+    displayResult(convertedAmount);
 });
 
 console.log("It Worked");
