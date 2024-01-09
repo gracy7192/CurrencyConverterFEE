@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+console.log("It Worked");
+
 function convertCurrency(amount, fromCurrency, toCurrency) {
     var exchangeRates = {
         USD: {
