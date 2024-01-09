@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener( function () {
     var convertButton = document.querySelector('.cvt');
     convertButton.addEventListener('click', function () {
         var amount = parseFloat(document.getElementById('amount').value);
