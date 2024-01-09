@@ -13,8 +13,6 @@ convertButton.addEventListener('click', function () {
     displayResult(convertedAmount);
 });
 
-console.log("It Worked");
-
 function convertCurrency(amount, fromCurrency, toCurrency) {
     var exchangeRates = {
         USD: {
